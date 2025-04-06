@@ -6,9 +6,9 @@ python -m venv venv
 call venv\Scripts\activate
 
 python -m pip install --upgrade pip
-pip install django gunicorn
+pip install django gunicorn whitenoise psycopg2-binary
 
-django-admin startproject %PROJECTNAME%
+django-admin startproject %PROJECTNAME% .
 cd %PROJECTNAME%
 python manage.py startapp %APPNAME%
 
